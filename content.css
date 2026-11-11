@@ -1,0 +1,26 @@
+/* 訳文は擬似要素で出すので、コードをコピーしても混ざらない */
+[data-rspec-ja]::after {
+  content: attr(data-rspec-ja);
+  display: block;
+  white-space: pre;
+  color: var(--fgColor-muted, #59636e);
+  font-style: italic;
+  user-select: none;
+  pointer-events: none;
+}
+
+#rspec-ja-download {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 9999;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 6px;
+  background: var(--button-primary-bgColor-rest, #1f883d);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}

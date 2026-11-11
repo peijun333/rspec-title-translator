@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "RSpec Title Translator",
+  "version": "0.1.0",
+  "description": "GitHub の diff 上で RSpec の describe / context / it のタイトルだけを日本語訳して表示する",
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle",
+      "world": "MAIN"
+    }
+  ]
+}
